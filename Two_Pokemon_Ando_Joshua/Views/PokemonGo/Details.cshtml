@@ -1,0 +1,31 @@
+﻿@model Two_Pokemon_Ando_Joshua.Models.Pokemon
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<h1>@Model.Name</h1>
+<img src="@Model.SpriteUrl" alt="@Model.Name" />
+
+<h2>Details</h2>
+<p><strong>Height:</strong> @Model.Height</p>
+<p><strong>Weight:</strong> @Model.Weight</p>
+<p><strong>Types:</strong> @string.Join(", ", Model.Types)</p>
+
+<h2>Moves</h2>
+<ul>
+    @foreach (var move in Model.Moves)
+    {
+        <li>@move</li>
+    }
+</ul>
+
+<h2>Abilities</h2>
+<ul>
+    @foreach (var ability in Model.Abilities)
+    {
+        <li>@ability</li>
+    }
+</ul>
+
+<a asp-action="Index">Back to List</a>

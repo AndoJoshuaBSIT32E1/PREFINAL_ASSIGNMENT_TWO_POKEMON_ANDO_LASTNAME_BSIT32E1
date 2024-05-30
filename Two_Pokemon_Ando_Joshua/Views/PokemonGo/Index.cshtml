@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Two_Pokemon_Ando_Joshua.Models.Pokemon>
+
+@{
+    ViewData["Title"] = "Pokemon List";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Go!</title>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Pokémon Go! World</h1>
+        <input type="text" id="searchBar" placeholder="Find your favorite Pokémon Go!...">
+    </header>
+    <main id="pokemonContainer">
+    </main>
+    <div id="pokemonModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="pokemonInfo">
+            </div>
+        </div>
+    </div>
+    <script src="~/js/site.js"></script>
+</body>
+</html>
+
+
+
